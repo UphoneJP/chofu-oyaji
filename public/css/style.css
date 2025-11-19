@@ -25,7 +25,6 @@ img#backgroundImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* z-index: 0; */
   opacity: 0;
 }
 img#backgroundImg.fade-in-image {
@@ -39,14 +38,14 @@ img#backgroundImg.fade-in-image {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff;
+    background: white;
     animation: mask 10s infinite
 }
 @keyframes mask {
-  0%, 15%, 100% {
+  0%, 10%, 100% {
     opacity: 1
   }
-  25%, 90% {
+  20%, 90% {
     opacity: 0
   }
 }
@@ -56,12 +55,12 @@ img#backgroundImg.fade-in-image {
     text-align: center;
     z-index: 2;
     opacity: 0;
-    transform: translateY(20px);
+    margin-bottom: 64px;
 }
 .hero {
   background: #ffffff99;
   width: 100%;
-  padding: 40px 0;
+  padding: 32px 0 16px;
 }
 .fade-in {
     opacity: 1;
@@ -84,25 +83,25 @@ button:hover {
     background: #ff4500;
 }
 
-#scroll-down {
+.scroll-down {
   position: absolute;
   bottom: 64px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
 }
-#scroll-down:active {
+.scroll-down:active {
   opacity: 0.5;
   transform: translateY(4px);
 }
-#scroll-up {
+.scroll-up {
   position: absolute;
   top: 16px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
 }
-#scroll-up:active {
+.scroll-up:active {
   opacity: 0.5;
   transform: translateY(-4px);
 }
@@ -113,7 +112,7 @@ button:hover {
   border: 1px #333333 solid;
   border-radius: 8px;
   box-sizing: border-box;
-  background-color: #ffffff99;
+  background-color: #ffffff;
   margin-bottom: 8px;
 }
 #farewell {
@@ -126,4 +125,163 @@ button:hover {
   background-color: #ffffff99;
   margin-bottom: 8px;
 
+}
+/* 最初のアニメーション */
+#frame {
+    /* display: none; */
+    background: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: start 3s forwards;
+    z-index: 10;
+}
+@keyframes start {
+    0% {
+        opacity: 1;
+    } 
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+#logo {
+    width: 100%;
+    object-fit: contain;
+    animation: stump 1s forwards, fade-in-out 3s forwards;
+}
+@keyframes fade-in-out {
+    0% {
+        opacity: 0%;
+    }
+    90%{
+        opacity: 100%
+    }
+    100%{
+        opacity: 100%
+    }
+}
+@keyframes stump {
+    0% {
+        transform: scale(10);
+    }
+    40% {
+        transform: scale(0.95) translateY(30px) rotate(3deg);
+    }
+    65% {
+        transform: scale(1.05) translateY(-10px) rotate(-2deg);
+    }
+    80% {
+        transform: scale(0.98) translateY(5px) rotate(1deg);
+    }
+    90% {
+        transform: scale(1.03) translateY(-3px) rotate(-1deg);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* page1 */
+.belt {
+    position: absolute;
+    width: 2000%;
+    height: 500px;
+    opacity: 0;
+}
+#page1 {
+    top: -800px;
+    transform: rotate(-75deg) translateX(-100%);
+    background-color: #00000099;
+}
+#shadow1 {
+    top: -1200px;
+    transform: rotate(-75deg) translateX(-100%);
+    background-color: #88888899;
+}
+#page1.view,
+#shadow1.view {
+    transform: rotate(-75deg) translateX(0);
+    opacity: 1;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.spring {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+/* page2  */
+#page2 {
+    top: -800px;
+    transform: rotate(75deg) translateX(100%);
+    background-color: #00000099;
+}
+#shadow2 {
+    top: -1200px;
+    transform: rotate(75deg) translateX(100%);
+    background-color: #88888899;
+}
+#page2.view,
+#shadow2.view {
+    transform: rotate(75deg) translateX(0);
+    opacity: 1;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.summer {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+/* page3  */
+#page3 {
+    bottom: -800px;
+    transform: rotate(75deg) translateX(-100%);
+    background-color: #00000099;
+}
+#shadow3 {
+    bottom: -1200px;
+    transform: rotate(75deg) translateX(-100%);
+    background-color: #88888899;
+}
+#page3.view,
+#shadow3.view {
+    transform: rotate(75deg) translateX(0);
+    opacity: 1;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.fall {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+/* page4  */
+#page4 {
+    bottom: -800px;
+    transform: rotate(-75deg) translateX(100%);
+    background-color: #00000099;
+}
+#shadow4 {
+    bottom: -1200px;
+    transform: rotate(-75deg) translateX(100%);
+    background-color: #88888899;
+}
+#page4.view,
+#shadow4.view {
+    transform: rotate(-75deg) translateX(0);
+    opacity: 1;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+.winter {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
 }
