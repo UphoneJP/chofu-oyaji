@@ -54,7 +54,6 @@ img#backgroundImg.fade-in-image {
     color: #333333;
     text-align: center;
     z-index: 2;
-    opacity: 0;
     margin-bottom: 64px;
 }
 .hero {
@@ -62,11 +61,6 @@ img#backgroundImg.fade-in-image {
   width: 100%;
   padding: 32px 0 16px;
   color: white;
-}
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 1s ease-out 1s;
 }
 .button {
     background: #ff7f50;
@@ -86,7 +80,7 @@ button:hover {
 
 .scroll-down {
   position: absolute;
-  bottom: 64px;
+  bottom: 16px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
@@ -117,9 +111,10 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 24px 0 32px;
+  padding: 8px 0;
   text-align: center;
   background-color: #00000099;
+  color: gray;
 }
 
 
@@ -221,6 +216,8 @@ footer {
   position: absolute;
   top: 10%;
   left: 5%;
+  color: pink;
+  margin-right: 5%;
 }
 
 /* page2  */
@@ -244,6 +241,9 @@ footer {
   position: absolute;
   top: 10%;
   right: 5%;
+  color: rgb(0, 225, 0);
+  text-align: end;
+  margin-left: 5%;
 }
 
 /* page3  */
@@ -267,6 +267,8 @@ footer {
   position: absolute;
   bottom: 10%;
   left: 5%;
+  color: orange;
+  margin-right: 5%;
 }
 
 /* page4  */
@@ -290,4 +292,33 @@ footer {
   position: absolute;
   bottom: 10%;
   right: 5%;
+  margin-left: 5%;
+  color: skyblue;
+  text-align: end;
+}
+
+
+.subtitle {
+  font-size: 24px;
+  margin: 16px 0 0;
+}
+.subtitle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.subtitle:active {
+  opacity: 0.6;
+}
+.box {
+  padding: 16px;
+  background-color: #ffffff99;
+  color: black;
+  border-radius: 16px;
+  z-index: 20;
+  text-align: start;
+  margin-top: 8px;
+  display: none;
+}
+.box.view {
+  display: block;
 }

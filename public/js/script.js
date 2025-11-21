@@ -30,12 +30,6 @@ window.addEventListener('resize', setFullHeight);
 let lastIndex = 1;
 let index = 0;
 document.addEventListener("DOMContentLoaded", function() {
-
-  // 文字のフェードイン
-  const contents = document.querySelectorAll('.content')
-  contents.forEach(content => {
-    content.classList.add('fade-in')
-  })
   
   // 背景画像切り替え
   function changeBackground() {
@@ -119,9 +113,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
   }, { threshold: 0.8 });
-
   // 監視したいセクションだけを登録
   sections.forEach(sec => io.observe(sec));
+
+
+  // クリックしたら説明文を表示
+  const subtitles = document.querySelectorAll('.subtitle');
+  const boxes = document.querySelectorAll('.box');
+  subtitles.forEach((subtitle, index) => {
+    subtitle.addEventListener('click', () => { 
+      for(let box of boxes){
+        if(box !== boxes[index]){
+          box.classList.remove('view');
+        } else {
+          box.classList.toggle('view');
+        }
+      }
+    });
+  });
 
 });
 
