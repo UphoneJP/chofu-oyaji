@@ -80,7 +80,7 @@ button:hover {
 
 .scroll-down {
   position: absolute;
-  bottom: 16px;
+  bottom: 48px;
   margin: auto;
   line-height: 48px;
   z-index: 6;
