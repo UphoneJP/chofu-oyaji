@@ -54,7 +54,7 @@ img#backgroundImg.fade-in-image {
     color: #333333;
     text-align: center;
     z-index: 2;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 .hero {
   background: #00000099;
@@ -65,7 +65,7 @@ img#backgroundImg.fade-in-image {
 .button {
     background: #ff7f50;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 16px 8px;
     font-size: 16px;
     color: white;
     cursor: pointer;
@@ -111,10 +111,11 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 8px 0;
+  padding: 4px 0;
   text-align: center;
-  background-color: #00000099;
-  color: gray;
+  font-size: 12px;
+  background-color: #ffffff99;
+  color: #444444;
 }
 
 
