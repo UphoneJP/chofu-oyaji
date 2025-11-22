@@ -11,10 +11,7 @@ const images = [
   "public/pictures/10.jpg",
   "public/pictures/11.jpg",
   "public/pictures/12.jpg",
-  "public/pictures/13.jpg", 
-  "public/pictures/14.jpg",
-  "public/pictures/15.jpg",
-  "public/pictures/16.jpg"
+  "public/pictures/13.jpg"
 ];
 
 function setFullHeight() {
